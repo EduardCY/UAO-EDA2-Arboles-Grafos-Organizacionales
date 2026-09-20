@@ -1,5 +1,5 @@
 {
-  "name": "proyecto3-correccion",
+  "name": "uao-eda2-arboles-grafos-organizacionales",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -25,5 +25,9 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
     "vite": "^5.2.0"
-  }
+  },
+  "description": "Visualizador y simulador interactivo de estructuras jerarquicas y relacionales (Arboles y Grafos) con React y Vite (UAO).",
+  "author": "Eduard Criollo Yule <https://github.com/EduardCY>",
+  "license": "MIT",
+  "homepage": "https://github.com/EduardCY/UAO-EDA2-Arboles-Grafos-Organizacionales"
 }
