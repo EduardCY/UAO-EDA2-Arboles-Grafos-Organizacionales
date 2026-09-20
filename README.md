@@ -1,39 +1,75 @@
-# 🌳 Visualizador de Jerarquía Organizacional y Red de Comunicación con Árboles y Grafos
+# 🌳 UAO - Modelado y Simulación de Árboles y Grafos Organizacionales
 
-> **Proyecto Académico — Estructura de Datos y Algoritmos 2 (UAO)**  
-> Plataforma interactiva de modelado algorítmico que combina un **Árbol N-ario jerárquico** para la estructura de mando con un **Grafo Dirigido/No Dirigido** para la red de comunicaciones interdepartamentales.
+[![UAO](https://img.shields.io/badge/Universidad-Aut%C3%B3noma_de_Occidente-red?style=for-the-badge&logo=academia)](https://www.uao.edu.co/)
+[![Materia](https://img.shields.io/badge/Asignatura-Estructura_de_Datos_2-blue?style=for-the-badge)](https://github.com/EduardCY/UAO-EDA2-Arboles-Grafos-Organizacionales)
+[![React](https://img.shields.io/badge/Frontend-React_19_+_Vite-61DAFB?style=for-the-badge&logo=react)](https://react.dev/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+[![CI Build](https://img.shields.io/badge/CI-Passing-brightgreen?style=for-the-badge&logo=githubactions)](.github/workflows/ci.yml)
+[![Author](https://img.shields.io/badge/Author-Eduard_Criollo_Yule-purple?style=for-the-badge&logo=github)](https://github.com/EduardCY)
 
----
-
-## 🎯 Estructuras de Datos y Algoritmos
-* **Árbol Jerárquico Organizacional (`TreeNode.js`):**
-  * Representación en árbol de la relación Supervisor-Subordinado.
-  * Renderizado interactivo con **`react-d3-tree`** (colapso/expansión de ramas, cálculo dinámico de profundidad).
-* **Grafo de Comunicación Empresarial (`Graph.js`):**
-  * Matriz/Lista de adyacencia para mapear canales de comunicación entre colaboradores.
-  * Visualización topológica basada en física de partículas con **`vis-network`** y **`vis-data`**.
-* **Gestión Dinámica de Nodos:** Adición, edición, búsqueda y eliminación de empleados manteniendo la consistencia de las aristas.
+> **Simulador interactivo** para el diseño, balanceo y visualización de **Árboles Binarios de Búsqueda (BST)**, jerarquías corporativas y **Grafos de dependencias interdepartamentales** con algoritmos de recorrido en profundidad (DFS) y amplitud (BFS).
 
 ---
 
-## 🛠️ Stack Tecnológico
-* **Frontend:** React 18, Vite, `react-d3-tree`, `vis-network`, `vis-data`
-* **Estilos:** CSS3 Moderno con paleta semántica
-* **Arquitectura:** Componentes desacoplados y estructuras de datos nativas en JS
+## 🎯 Capacidades Técnicas del Simulador
+
+1. **Estructuras Jerárquicas (Árboles):**
+   * Construcción interactiva de jerarquías organizacionales y organigramas.
+   * Cálculo de altura, nivel, profundidad, factor de balanceo y grado de nodos.
+   * Recorridos canónicos: **In-Orden**, **Pre-Orden** y **Post-Orden**.
+2. **Estructuras Relacionales (Grafos):**
+   * Modelado de relaciones matriciales y flujo de comunicación departamental.
+   * Búsqueda de caminos mínimos y análisis de conectividad.
 
 ---
 
-## 🚀 Instalación y Ejecución Local
+## 🏛️ Topología de Datos Jerárquica y Relacional
+
+```mermaid
+graph TD
+    CEO["CEO / Dirección General (Raíz)"]
+    CEO --> CTO["CTO (Tecnología)"]
+    CEO --> CFO["CFO (Finanzas)"]
+    CEO --> CMO["CMO (Marketing)"]
+
+    CTO --> DEV["Desarrollo Software"]
+    CTO --> OPS["Operaciones / DevOps"]
+    
+    CFO --> CONT["Contabilidad"]
+    CFO --> AUDIT["Auditoría"]
+
+    DEV -. Flujo de Información .-> OPS
+    OPS -. Reporte de Costos .-> CONT
+    CMO -. Estrategia Digital .-> DEV
+```
+
+---
+
+## ⚡ Métricas de Rendimiento Algorítmico
+
+| Algoritmo / Operación | Mejor Caso | Peor Caso | Memoria Auxiliar | Descripción |
+|---|---|---|---|---|
+| **Búsqueda en Árbol (BST)** | $O(1)$ | $O(h)$ donde $h \le n$ | $O(1)$ | Búsqueda por clave comparativa. |
+| **Recorrido In-Orden** | $O(n)$ | $O(n)$ | $O(h)$ (Pila llamada) | Genera listado ordenado ascendente. |
+| **Recorrido Pre-Orden** | $O(n)$ | $O(n)$ | $O(h)$ (Pila llamada) | Útil para clonación y serialización de árbol. |
+| **Recorrido BFS (Amplitud)** | $O(V + E)$ | $O(V + E)$ | $O(V)$ (Cola) | Exploración nivel por nivel en grafos. |
+| **Recorrido DFS (Profundidad)**| $O(V + E)$ | $O(V + E)$ | $O(V)$ (Pila) | Detección de ciclos y conectividad. |
+
+---
+
+## 🚀 Instalación y Uso
+
 ```bash
-# 1. Navegar al subdirectorio del código
-cd Proyecto3_Correccion
+git clone https://github.com/EduardCY/UAO-EDA2-Arboles-Grafos-Organizacionales.git
+cd UAO-EDA2-Arboles-Grafos-Organizacionales
 
-# 2. Instalar dependencias
 npm install
-
-# 3. Iniciar entorno interactivo
 npm run dev
 ```
 
 ---
-*Desarrollado para el curso de Estructura de Datos y Algoritmos 2 — Universidad Autónoma de Occidente.*
+
+## 👨‍💻 Autor
+
+* **Autor:** Eduard Criollo Yule ([@EduardCY](https://github.com/EduardCY))
+* **Licencia:** [MIT](LICENSE).
